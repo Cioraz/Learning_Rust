@@ -1,4 +1,12 @@
 
+fn another_function(x:i32){
+    println!("The value of x is {x}");
+}
+
+fn print_label_measurement(value : i32,unit_label : char){
+    println!("The measurement is {value}{unit_label}");
+}
+
 fn main(){
     let mut x = 5;
     // It is a mutable variable hence its value can be changed during program course
@@ -54,13 +62,46 @@ fn main(){
     let months = ["January", "February", "March", "April", "May", "June", "July",
               "August", "September", "October", "November", "December"];
     let a = [1,2,3,4];
-    let b : [i32,5] = [1,2,3,4,5]; // All of i32 and 5 elements
-    let a = [3;5] // Creates an array with 5 elements all of value 3
+    let b : [i32;5] = [1,2,3,4,5]; // All of i32 and 5 elements
+    let a = [3;5]; // Creates an array with 5 elements all of value 3
 
     // Array elements are put on stack memory
     let a = [1, 2, 3, 4, 5];
 
     let first = a[0];
     let second = a[1];
+
+    another_function(40);
+    print_label_measurement(30,'h');
+
+    // 3.3
+
+    // If statements
+    let number = 3;
+    if number <5{
+        println!("condition true");
+    } else {
+        println!("condition false");
+    }
+
+    let number = 6;
+
+    if number % 4 == 0 {
+        println!("number is divisible by 4");
+    } else if number % 3 == 0 {
+        println!("number is divisible by 3");
+    } else if number % 2 == 0 {
+        println!("number is divisible by 2");
+    } else {
+        println!("number is not divisible by 4, 3, or 2");
+    }
+
+    // Loops
+
+    loop{
+        println!("Hello");
+    }
+
     
+
 }
