@@ -23,6 +23,7 @@ fn main(){
 
         println!("You guessed : {guess}");
 
+        // Match is here to check which case and match with it
         match guess.cmp(&secret_number){
             Ordering::Less => println!("Too small"),
             Ordering::Greater => println!("Too big"),
