@@ -1,4 +1,3 @@
-
 fn another_function(x:i32){
     println!("The value of x is {x}");
 }
@@ -6,6 +5,15 @@ fn another_function(x:i32){
 fn print_label_measurement(value : i32,unit_label : char){
     println!("The measurement is {value}{unit_label}");
 }
+
+fn five() -> i32{
+    5
+}
+
+fn plus_one(x:i32) -> i32{
+    x+1
+}
+
 
 fn main(){
     let mut x = 5;
@@ -22,8 +30,6 @@ fn main(){
     signed and unsigned
     8-bit = i8/u8
     16-bit = i16/u16
-
-
     */
 
     let var : u8 = 255;
@@ -55,7 +61,6 @@ fn main(){
     let five_hundred = tup.0;
     let six_point_four = tup.1;
     let one = tup.2;
-
 
     // Array must have all same data types
     // Must also have a fixed length
@@ -97,9 +102,30 @@ fn main(){
     }
 
     // Loops
-
+    /*
     loop{
         println!("Hello");
+    }*/
+
+    let x = five();
+    println!("Value of x is {x}");
+    let y = plus_one(5);
+    println!("Plus one is {y}");
+
+    let mut counter = 0;
+    let result = loop{
+        counter+=1;
+        if counter == 10{
+            break counter*2;
+        }
+    };
+
+    println!("{counter}");
+
+    let a = [10, 20, 30, 40, 50];
+
+    for element in a {
+        println!("the value is: {element}");
     }
 
     
